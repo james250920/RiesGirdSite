@@ -1,19 +1,39 @@
 <script setup lang="ts">
 import InitOrganizacion from '@/components/organizacion/initOrganizacion.component.vue';
-
+import RedInteruniversitaria from '@/components/organizacion/redInteruniversitaria.component.vue';
+import NuestraNaturaleza from '@/components/organizacion/nuestraNaturaleza.component.vue';
+import EjesAccion from '@/components/organizacion/ejesAccion.component.vue';
+import CtaCallToAction from '@/components/organizacion/ctaCallToAction.component.vue';
+import FuerzaAcademicaComponent from '~/components/organizacion/fuerzaAcademica.component.vue';
+import NuestraIdentidad from '~/components/organizacion/nuestraIdentidad.component.vue';
+import QueNosCaracteriza from '~/components/organizacion/QueNosCaracteriza.component.vue';
+import CtaCallToAction2 from '~/components/organizacion/ctaCallToAction2.component.vue';
+import PropositoComponent from '~/components/organizacion/proposito.component.vue';
+import NuestrosObjetivosOrg from '~/components/organizacion/nuestrosObjetivosOrg.component.vue';
+import CtaCallToAction3 from '~/components/organizacion/ctaCallToAction3.component.vue';
+import CompromisoComponent from '~/components/organizacion/compromiso.component.vue';
+import { C } from 'vue-router/dist/index-BQLwgiyK.js';
 </script>
-
-import { defineComponent } from 'vue';
-import InitOrganizacion from '@/components/organizacion/initOrganizacion.component.vue';
 
 <template>
   <InitOrganizacion />
   <main class="main-body">
+    
     <div class="content-wrapper">
-      <h1 class="text-3xl font-bold text-blue-600 mb-6">Nuestra Organización</h1>
-      <p class="text-gray-700 leading-relaxed">
-        Aquí se mostrará la información sobre la organización de RiesGIRD-ACC PERÚ.
-      </p>
+      <RedInteruniversitaria />
+      <NuestraNaturaleza />
+      <EjesAccion />
+      <CtaCallToAction />
+      <FuerzaAcademicaComponent />
+      <NuestraIdentidad />
+      <QueNosCaracteriza />
+      <CtaCallToAction2 />
+      <PropositoComponent />
+      <NuestrosObjetivosOrg />
+      <br />
+      <CtaCallToAction3 />
+      <CompromisoComponent />
+      
     </div>
   </main>
 </template>

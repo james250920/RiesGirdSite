@@ -1,10 +1,12 @@
 <script setup>
-// No requiere lógica adicional, diseño puro 1:1 con CSS
+// No requiere lógica adicional, diseño puro 1:1 con CSS adaptado según distribución de color
 </script>
 
 <template>
   <section class="objetivos-section">
-    <h2 class="section-title">Nuestros Objetivos</h2>
+    <div class="title-container">
+      <h2 class="section-title">Nuestros Objetivos</h2>
+    </div>
     
     <p class="intro-text">
       La Red Interuniversitaria para la Gestión Integral del Riesgo de Desastres y la Adaptación al Cambio Climático (RIESGIRD-ACC Perú) es un espacio de articulación académica que agrupa a las universidades del país comprometidas con la seguridad y la resiliencia climática.
@@ -16,8 +18,6 @@
         <span class="t-azul">General</span>
       </div>
       <div class="box-bicolor">
-        <div class="mitad-borde-rojo"></div>
-        <div class="mitad-borde-azul"></div>
         <p class="quote-text">
           "Impulsar la gestión integral del riesgo de desastres y la adaptación al cambio climático en las universidades peruanas, integrándolas en la formación, investigación y responsabilidad social para contribuir al desarrollo sostenible del país."
         </p>
@@ -53,42 +53,53 @@
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 20px;
-  display: inline-block;
-  position: relative;
-  padding-bottom: 10px;
+.title-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
+.section-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000000;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 12px;
+  margin: 0;
+}
+
+/* Subrayado con gradiente fluido unificado */
 .section-title::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #cc2c2c 50%, #1e40af 50%);
+  height: 5px;
+  background: linear-gradient(to right, #db143c, #1e3a8a);
+  border-radius: 4px;
 }
 
 .intro-text {
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #334155;
   margin-bottom: 60px;
 }
 
-/* 2. ESTILOS OBJETIVO GENERAL (Bicolor) */
+/* 2. ESTILOS OBJETIVO GENERAL (Bicolor Corporativo) */
 .objetivo-general-wrapper {
   position: relative;
   max-width: 900px;
-  margin: 0 auto 70px;
+  margin: 0 auto 75px;
 }
 
 .tag-flotante-general {
@@ -96,66 +107,56 @@
   top: -22px;
   left: 50%;
   transform: translateX(-50%);
-  background: white;
+  background: #ffffff;
   padding: 8px 30px;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   z-index: 10;
   display: flex;
   gap: 6px;
-  border-left: 2px solid #cc2c2c;
-  border-right: 2px solid #1e40af;
+  border-radius: 8px;
+  
+  /* Contorno con transicion de gradiente limpio */
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #db143c, #1e3a8a);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
-.t-rojo { color: #0d0c0c; }
-.t-azul { color: #0d0c0c; }
+.t-rojo, .t-azul { color: #000000; }
 
 .box-bicolor {
   position: relative;
-  background: white;
-  padding: 45px 50px;
-  border-radius: 15px;
-}
-
-.mitad-borde-rojo, .mitad-borde-azul {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  border: 2.5px solid;
-  pointer-events: none;
-}
-
-.mitad-borde-rojo {
-  left: 0;
-  border-color: #cc2c2c;
-  border-right: none;
-  border-radius: 15px 0 0 15px;
-}
-
-.mitad-borde-azul {
-  right: 0;
-  border-color: #1e40af;
-  border-left: none;
-  border-radius: 0 15px 15px 0;
+  background: #ffffff;
+  padding: 50px 45px 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #db143c, #1e3a8a);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .quote-text {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.15rem;
+  font-style: italic;
   color: #1e293b;
   line-height: 1.7;
   position: relative;
   z-index: 5;
+  margin: 0;
 }
 
-/* 3. GRID DE OBJETIVOS ESPECÍFICOS */
+/* 3. GRID Y CONFIGURACIÓN DE OBJETIVOS ESPECÍFICOS */
 .grid-objetivos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 45px 25px; /* Espaciado adaptativo para resguardar las pestañas superiores */
+  margin-bottom: 45px;
 }
 
 .card-objetivo {
@@ -163,55 +164,103 @@
   flex: 1;
   min-width: 300px;
   max-width: 340px;
-  padding-top: 25px; /* Espacio para la pestaña */
 }
 
+/* Pestaña flotante individual compartida */
 .tag-card {
   position: absolute;
-  top: 0;
+  top: -24px;
   left: 50%;
   transform: translateX(-50%);
-  background: white;
-  padding: 6px 25px;
+  background: #ffffff;
+  padding: 10px 35px;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 700;
-  border-radius: 10px 10px 0 0;
-  z-index: 2;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  border-radius: 12px 12px 0 0;
+  z-index: 4;
+  white-space: nowrap;
 }
 
+/* Triángulo sutil de acople inferior */
+.tag-card::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  z-index: 5;
+}
+
+/* Caja de contenido de texto compartida */
 .content-card {
-  border-radius: 15px;
-  padding: 30px 25px;
-  color: white;
-  text-align: justify;
-  font-size: 0.95rem;
+  border-radius: 14px;
+  padding: 35px 25px 25px;
+  color: #ffffff;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.98rem;
   line-height: 1.6;
-  min-height: 180px;
+  min-height: 175px;
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Colores Azul (1, 2, 3) */
-.azul .tag-card { border: 2px solid #1e3a8a; border-bottom: none; color: #000; }
-.azul .content-card { background-color: #1e3a8a; }
+.content-card p {
+  margin: 0;
+}
 
-/* Colores Rojo (4, 5) */
-.rojo .tag-card { border: 2px solid #cc2c2c; border-bottom: none; color: #000; }
-.rojo .content-card { background-color: #cc2c2c; }
+/* ================= COMPORTAMIENTO ESPECÍFICO DE COLOR VARIANTE (1:1 con la Imagen) ================= */
 
-/* 4. RESPONSIVE */
+/* --- VARIANTE AZUL (Objetivos 1, 2 y 3) --- */
+.azul .tag-card {
+  border: 1.5px solid #1e3a8a;
+  border-bottom: none;
+  color: #1e3a8a;
+}
+.azul .tag-card::after {
+  border-top: 10px solid #ffffff; /* Color acoplado al fondo blanco de la cabecera */
+}
+.azul .content-card {
+  background-color: #1e3a8a;
+}
+
+/* --- VARIANTE ROJO/CARMESÍ (Objetivos 4 y 5) --- */
+.rojo .tag-card {
+  border: 1.5px solid #db143c;
+  border-bottom: none;
+  color: #db143c;
+}
+.rojo .tag-card::after {
+  border-top: 10px solid #ffffff; /* Sincroniza limpiamente la apertura */
+}
+.rojo .content-card {
+  background-color: #db143c;
+}
+
+/* 4. RESPONSILE DESIGN */
 @media (max-width: 768px) {
   .grid-objetivos {
     flex-direction: column;
     align-items: center;
+    gap: 40px;
   }
+  
   .card-objetivo {
     width: 100%;
     max-width: 100%;
   }
+  
   .box-bicolor {
     padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
   }
 }
 </style>
