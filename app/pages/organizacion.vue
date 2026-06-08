@@ -12,7 +12,9 @@ import PropositoComponent from '~/components/organizacion/proposito.component.vu
 import NuestrosObjetivosOrg from '~/components/organizacion/nuestrosObjetivosOrg.component.vue';
 import CtaCallToAction3 from '~/components/organizacion/ctaCallToAction3.component.vue';
 import CompromisoComponent from '~/components/organizacion/compromiso.component.vue';
-import { C } from 'vue-router/dist/index-BQLwgiyK.js';
+import MisionVisionComponent from '~/components/organizacion/misionVisionAgr.component.vue';
+import CtaCallToAction4 from '~/components/organizacion/ctaCallToAction4.component.vue'; 
+import PrincipiosTrabajoComponent from '~/components/organizacion/principiosTrabajo.component.vue';
 </script>
 
 <template>
@@ -33,7 +35,10 @@ import { C } from 'vue-router/dist/index-BQLwgiyK.js';
       <br />
       <CtaCallToAction3 />
       <CompromisoComponent />
-      
+      <MisionVisionComponent />
+      <br />
+      <CtaCallToAction4 />
+      <PrincipiosTrabajoComponent />
     </div>
   </main>
 </template>

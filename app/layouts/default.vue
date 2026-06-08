@@ -16,8 +16,8 @@ import AppShell from '~/components/app/AppShell.vue';
           <nav class="nav-menu">
             <NuxtLink to="/" class="nav-item" active-class="active-link">RED</NuxtLink>
             <NuxtLink to="/organizacion" class="nav-item" active-class="active-link">Organización</NuxtLink>
-            <NuxtLink to="/lineas-accion" class="nav-item" active-class="active-link">Líneas de acción</NuxtLink>
-            <NuxtLink to="/eventos-noticias" class="nav-item" active-class="active-link">Eventos y noticias</NuxtLink>
+            <NuxtLink to="/redInvestigadores" class="nav-item" active-class="active-link">Líneas de acción</NuxtLink>
+            <NuxtLink to="/gestionConocimiento" class="nav-item" active-class="active-link">Eventos y noticias</NuxtLink>
             <NuxtLink to="/investigaciones" class="nav-item" active-class="active-link">Documentos e investigaciones</NuxtLink>
           </nav>
 
