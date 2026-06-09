@@ -15,10 +15,10 @@ import AppShell from '~/components/app/AppShell.vue';
 
           <nav class="nav-menu">
             <NuxtLink to="/" class="nav-item" active-class="active-link">RED</NuxtLink>
-            <NuxtLink to="/organizacion" class="nav-item" active-class="active-link">Organización</NuxtLink>
-            <NuxtLink to="/estructuraOrganizacional" class="nav-item" active-class="active-link">Líneas de acción</NuxtLink>
-            <NuxtLink to="/investigacionesProducidas" class="nav-item" active-class="active-link">Eventos y noticias</NuxtLink>
-            <NuxtLink to="/procesoMembresia" class="nav-item" active-class="active-link">Documentos e investigaciones</NuxtLink>
+            <NuxtLink to="/estructuraOrganizacional" class="nav-item" active-class="active-link">Organización</NuxtLink>
+            <NuxtLink to="/impactoReal" class="nav-item" active-class="active-link">Líneas de acción</NuxtLink>
+            <NuxtLink to="/eventosNoticias" class="nav-item" active-class="active-link">Eventos y noticias</NuxtLink>
+            <NuxtLink to="/materialesFormacion" class="nav-item" active-class="active-link">Documentos e investigaciones</NuxtLink>
           </nav>
 
         </div>

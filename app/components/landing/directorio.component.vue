@@ -24,8 +24,9 @@ const directivos = [
 
 <template>
   <section class="directorio-section">
-    <h2 class="section-title">Directorio</h2>
-    
+    <NuxtLink to="/directorio">
+    <h2 class="section-title ">Directorio</h2>
+    </NuxtLink>
     <p class="intro-text">
       Sección destinada al registro y archivo oficial de las actividades, acuerdos y reuniones sostenidas por los directivos en el marco de la red.
     </p>

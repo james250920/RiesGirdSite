@@ -8,7 +8,7 @@ const bgImage = '/img.png'
     <div class="banner-overlay"></div>
 
     <div class="banner-content">
-      <h1 class="banner-title">Investigaciones</h1>
+      <h1 class="banner-title">Investigaciones Producidas por la Red</h1>
       <p class="banner-subtitle">Conoce Nuestras Investigaciones</p>
     </div>
 

@@ -17,36 +17,56 @@ const currentYear = 2026
         <div class="links-column">
           <h3 class="column-title">Organización</h3>
           <ul class="links-list">
-            <li><NuxtLink to="/red">RED</NuxtLink></li>
-            <li><NuxtLink to="/que-es-la-red">¿Qué es la Red?</NuxtLink></li>
-            <li><NuxtLink to="/estructura">Estructura organizacional</NuxtLink></li>
-            <li><NuxtLink to="/membresia">Proceso y requisito de membresía</NuxtLink></li>
+            <li><NuxtLink to="/">RED</NuxtLink></li>
+            <li><NuxtLink to="/organizacion">¿Qué es la Red?</NuxtLink></li>
+            <li><NuxtLink to="/estructuraOrganizacional">Estructura organizacional</NuxtLink></li>
+            <li><NuxtLink to="/procesoMembresia">Proceso y requisito de membresía</NuxtLink></li>
           </ul>
         </div>
 
         <div class="links-column">
           <h3 class="column-title">Líneas de acción</h3>
           <ul class="links-list">
-            <li><NuxtLink to="/investigacion">Investigación</NuxtLink></li>
-            <li><NuxtLink to="/formacion">Formación</NuxtLink></li>
-            <li><NuxtLink to="/responsabilidad-social">Responsabilidad socio ambiental</NuxtLink></li>
+            <li><NuxtLink to="/investigacionesProducidas">Investigación</NuxtLink></li>
+            <li><NuxtLink to="/estrategiaTransversalizacion">Formación</NuxtLink></li>
+            <li><NuxtLink to="/servicioDesarrolloTerritorial">Responsabilidad socio ambiental</NuxtLink></li>
           </ul>
         </div>
 
         <div class="links-column">
           <h3 class="column-title">Eventos y noticias</h3>
-          <ul class="links-list"></ul>
+          <ul class="links-list">
+            <li><NuxtLink to="/eventosNoticias">Noticias</NuxtLink></li>
+            <li><NuxtLink to="/noticiasConvocatorias">Convocatorias</NuxtLink></li>
+            <div class="links-column">
+          <h3 class="column-title">Miembros</h3>
+          <ul class="links-list">
+            <li><NuxtLink to="/directorio">Directorio</NuxtLink></li>
+            <li><NuxtLink to="/universidades">Universidades</NuxtLink></li>
+            
+          </ul>
+        </div>
+          </ul>
         </div>
 
         <div class="links-column">
           <h3 class="column-title">Documentos e investigaciones</h3>
           <ul class="links-list">
-            <li><NuxtLink to="/memorias">Memorias</NuxtLink></li>
-            <li><NuxtLink to="/documentos-gestion">Documentos y Gestión</NuxtLink></li>
-            <li><NuxtLink to="/investigaciones-docs">Investigaciones</NuxtLink></li>
+            <li><NuxtLink to="/memoriasCongreso">Memorias</NuxtLink></li>
+            <li><NuxtLink to="/gestionConocimiento">Documentos y Gestión</NuxtLink></li>
+            <li><NuxtLink to="/investigacionesProducidas">Investigaciones</NuxtLink></li>
+            <li><NuxtLink to="/presenciaRed">Presencia Riesgird</NuxtLink></li>
           </ul>
         </div>
-
+        <div class="links-column">
+          <h3 class="column-title">Asambleas</h3>
+          <ul class="links-list">
+            <li><NuxtLink to="/asamblea">Asamblea</NuxtLink></li>
+            <li><NuxtLink to="/ofertaActualGird">Oferta Actual Riesgird</NuxtLink></li>
+            <li><NuxtLink to="/estrategiaTransversalizacion">Estrategia</NuxtLink></li>
+            <li><NuxtLink to="/dialogosGobiernoGestion">Gobierno y Gestión</NuxtLink></li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -94,7 +114,7 @@ const currentYear = 2026
 /* --- REJILLA DE ENLACES --- */
 .footer-links-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   flex: 1;
 }

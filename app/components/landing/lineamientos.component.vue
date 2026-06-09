@@ -36,8 +36,9 @@ const lineamientos = [
 
 <template>
   <section class="lineamientos-section">
+    <NuxtLink to="/lineamiento">
     <h2 class="section-title">Lineamientos</h2>
-    
+    </NuxtLink>
     <p class="intro-text">
       La RIESGIRD-ACC Perú orienta su accionar bajo los siguientes lineamientos:
     </p>

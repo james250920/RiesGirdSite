@@ -10,7 +10,9 @@ const eventos = [
 
 <template>
   <section class="eventos-section">
-    <h2 class="section-title">Eventos y Noticias Destacados</h2>
+    <NuxtLink to="/eventosNoticias">
+      <h2 class="section-title">Eventos y Noticias Destacados</h2>
+    </NuxtLink>
 
     <div class="eventos-grid">
       <div 

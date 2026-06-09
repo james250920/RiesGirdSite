@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#fcfcfc] py-16 px-4 sm:px-6 lg:px-8 font-sans">
+  <div class="font-sans">
     <div class="max-w-6xl mx-auto text-center">
       
       <h1 class="text-3xl font-bold text-gray-900 relative inline-block pb-1 tracking-tight">
