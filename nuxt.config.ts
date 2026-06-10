@@ -1,5 +1,23 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  modules: [
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@ant-design-vue/nuxt',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/svg-sprite',
+    '@nuxtjs/tailwindcss'
+  ],
+  googleFonts: {
+    families: {
+      'Bricolage Grotesque': [400, 700],
+      'Raleway': [300, 400, 600],
+    },
+    display: 'swap',
+    download: true,
+  },
+  css: ['./app/assets/css/main.css'],
   app: {
     head: {
       link: [
@@ -13,14 +31,4 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-
-  modules: [
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxt/scripts',
-    '@ant-design-vue/nuxt',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/svg-sprite',
-    '@nuxtjs/tailwindcss'
-  ]
 })
