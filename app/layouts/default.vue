@@ -100,16 +100,35 @@ import AppShell from '~/components/app/AppShell.vue';
 }
 
 /* --- Adaptación para Móviles (Responsive) --- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+    padding: 10px 0;
+  }
+
   .navbar-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+    padding: 0 15px;
   }
   
+  .main-logo {
+    height: 45px;
+  }
+
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 8px 15px;
+  }
+
+  .nav-item {
+    font-size: 0.85rem;
   }
 }
 </style>

@@ -126,16 +126,11 @@ const fotoComunidad = '/img.png';
   }
 
   .section-title {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 
   .description-paragraph {
     font-size: 1.1rem;
-  }
-  
-  .photo-wrapper {
-    max-width: 550px;
-    margin: 0 auto; /* Centra la imagen en móviles */
   }
 }
 </style>

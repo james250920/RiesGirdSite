@@ -93,3 +93,18 @@ const goBack = () => {
   router.back()
 }
 </script>
+
+<style scoped>
+@media (max-width: 1024px) {
+  aside {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  aside {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+</style>

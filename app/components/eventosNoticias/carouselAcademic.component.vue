@@ -1,28 +1,28 @@
 <template>
-  <div class="w-full max-w-6xl mx-auto px-4 py-12 relative select-none">
+  <div class="w-full max-w-6xl mx-auto px-4 py-8 md:py-12 relative select-none">
     
-    <div class="relative overflow-hidden min-h-[500px]">
+    <div class="relative overflow-hidden min-h-[450px] md:min-h-[500px]">
       <transition-group name="fade">
         <div 
           v-for="(slide, index) in slides" 
           v-show="currentIndex === index"
           :key="slide.id"
-          class="w-full flex flex-col items-center text-center space-y-6"
+          class="w-full flex flex-col items-center text-center space-y-4 md:space-y-6"
         >
-          <div class="max-w-3xl mx-auto px-4 space-y-4">
-            <h2 class="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight">
+          <div class="max-w-3xl mx-auto px-2 md:px-4 space-y-3 md:space-y-4">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 tracking-tight leading-tight">
               {{ slide.title }}
             </h2>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+            <p class="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
               {{ slide.description }}
             </p>
-            <p class="text-xs md:text-sm font-semibold text-gray-800">
+            <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-gray-800">
               Por: <span class="font-bold">{{ slide.author }}</span>
             </p>
           </div>
 
-          <div class="w-full max-w-4xl px-4 md:px-12">
-            <div class="overflow-hidden rounded-2xl shadow-md border border-gray-100 aspect-[16/8]">
+          <div class="w-full max-w-4xl px-2 md:px-12">
+            <div class="overflow-hidden rounded-2xl shadow-md border border-gray-100 aspect-[16/9] md:aspect-[16/8]">
               <img 
                 :src="slide.image" 
                 :alt="slide.title" 

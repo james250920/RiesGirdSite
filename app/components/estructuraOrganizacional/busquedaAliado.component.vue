@@ -260,8 +260,24 @@ function toggleCategoria(value: string) {
   gap: 20px;
 }
 
-@media (max-width: 600px) {
-  .aliados-grid { grid-template-columns: 1fr; }
+@media (max-width: 1024px) {
+  .aliados-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aliados-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .aliados-section {
+    padding: 32px 16px;
+  }
+  
+  .titulo {
+    font-size: 1.5rem;
+  }
 }
 
 /* ── Card ── */
@@ -276,6 +292,23 @@ function toggleCategoria(value: string) {
   transition: box-shadow 0.2s, transform 0.2s;
   cursor: pointer;
   min-height: 110px;
+}
+
+@media (max-width: 480px) {
+  .aliado-card {
+    flex-direction: column;
+  }
+  
+  .card-logo {
+    width: 100% !important;
+    min-width: unset !important;
+    padding: 20px !important;
+  }
+  
+  .card-divider {
+    width: 100% !important;
+    height: 1px !important;
+  }
 }
 
 .aliado-card:hover {

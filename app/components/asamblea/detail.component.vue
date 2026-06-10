@@ -220,9 +220,30 @@ const imagenPrincipal = 'https://images.unsplash.com/photo-1529156069898-49953e3
   gap: 14px;
 }
 
+@media (max-width: 1024px) {
+  .asamblea-wrapper {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-titulo {
+    font-size: 0.95rem;
+  }
+  .banner-title {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 580px) {
   .items-grid {
     grid-template-columns: 1fr;
+  }
+  .asamblea-wrapper {
+    padding: 16px;
   }
 }
 

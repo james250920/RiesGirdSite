@@ -45,7 +45,14 @@ import FasesProceso from '~/components/procesoMembresia/fasesProcesos.component.
   }
   
   .content-wrapper {
-    padding: 20px; /* Menos padding en móvil para aprovechar espacio */
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 20px 15px;
+    border-radius: 8px;
   }
 }
 </style>

@@ -238,15 +238,35 @@ const eventos = [
 
 /* --- DISEÑO RESPONSIVE --- */
 @media (max-width: 1024px) {
+  .eventos-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
   .eventos-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
     gap: 20px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .eventos-section {
+    padding: 40px 15px;
+  }
+
   .eventos-grid {
     grid-template-columns: 1fr; /* 1 columna en teléfonos móviles */
+  }
+
+  .info-title {
+    font-size: 1rem;
+  }
+
+  .info-subtitle {
+    font-size: 0.9rem;
   }
 }
 </style>

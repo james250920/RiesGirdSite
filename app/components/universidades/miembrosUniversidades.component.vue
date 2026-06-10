@@ -288,11 +288,38 @@ function onImgError(e) {
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */
-@media (max-width: 640px) {
-  .directorio__filtros { grid-template-columns: repeat(2, 1fr); }
-  .directorio__grid { grid-template-columns: 1fr; }
+@media (max-width: 1024px) {
+  .directorio {
+    padding: 24px 16px 40px;
+  }
+  .directorio__titulo {
+    font-size: 1.35rem;
+  }
 }
-@media (max-width: 380px) {
-  .directorio__filtros { grid-template-columns: 1fr; }
+
+@media (max-width: 768px) {
+  .directorio__filtros { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .directorio__grid { 
+    grid-template-columns: 1fr; 
+  }
+  .directorio__titulo {
+    font-size: 1.25rem;
+  }
+  .tarjeta__logo-wrap {
+    width: 80px;
+    padding: 10px;
+  }
+  .tarjeta__logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .directorio__filtros { 
+    grid-template-columns: 1fr; 
+  }
 }
 </style>

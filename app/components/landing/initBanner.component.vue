@@ -175,14 +175,16 @@ const collageImagenes = {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 20px 0;
   }
 
   .hero-text-block {
-    padding: 20px;
+    padding: 0 20px;
   }
 
   .hero-title {
     font-size: 1.1rem;
+    margin-bottom: 25px;
   }
 
   .hero-collage-block {
@@ -190,13 +192,57 @@ const collageImagenes = {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 10px 0;
+  }
+
+  .hero-container {
+    min-height: auto;
+  }
+
   .hero-title {
     font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-logo-wrapper {
+    max-width: 280px;
   }
 
   .hero-collage-block {
-    height: 300px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .collage-item {
+    position: relative;
+    width: calc(50% - 5px);
+    height: 150px;
+    clip-path: none !important; /* Remove complex clip-paths on mobile */
+    border-radius: 8px;
+  }
+
+  .clip-top, .clip-left, .clip-center, .clip-right {
+    z-index: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-collage-block {
+    height: auto;
+  }
+
+  .collage-item {
+    width: 100%;
+    height: 200px;
+  }
+
+  .collage-item:nth-child(n+3) {
+    display: none; /* Hide 2 images on very small screens to simplify */
   }
 }
 </style>

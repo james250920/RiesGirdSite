@@ -355,10 +355,21 @@ const universidades = [
 }
 
 /* ── Responsive ── */
+@media (max-width: 1024px) {
+  .universidades-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .linea-h-bottom {
+    width: 66%;
+  }
+}
+
 @media (max-width: 768px) {
   .diagrama-top {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .conector-h-wrapper {
@@ -366,17 +377,38 @@ const universidades = [
   }
 
   .col-derecha {
-    width: 240px;
+    width: 280px;
+    align-items: center;
+  }
+  
+  .col-izquierda {
+    width: 100%;
   }
 
   .universidades-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .linea-h-bottom {
+    width: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .universidades-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .linea-h-bottom {
+    display: none;
+  }
+  
+  .conector-desde-barra {
+    display: none;
+  }
+  
+  .conector-bottom {
+    margin-bottom: 20px;
   }
 }
 </style>

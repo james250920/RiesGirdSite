@@ -184,10 +184,24 @@ const lineamientos = [
 }
 
 /* --- RESPONSIVE DESIGN (MÓVILES Y TABLETS) --- */
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .lineamientos-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lineamientos-section {
+    padding: 30px 15px;
+  }
+
   .lineamientos-grid {
     grid-template-columns: 1fr; /* Pasa a una sola columna */
-    gap: 20px;
+    gap: 15px;
   }
 
   .lineamiento-card {
@@ -195,7 +209,20 @@ const lineamientos = [
   }
 
   .card-icon-block {
-    width: 90px; /* Un poco más angosto en pantallas chicas */
+    width: 80px; 
+  }
+
+  .circle-check {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card-text-block {
+    padding: 15px 20px;
+  }
+
+  .card-text-block p {
+    font-size: 0.95rem;
   }
 }
 </style>

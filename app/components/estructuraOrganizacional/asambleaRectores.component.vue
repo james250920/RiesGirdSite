@@ -1,8 +1,8 @@
 <template>
-  <div class="text-center">
+  <div class="text-center px-4 py-8 md:py-12">
     <div class="max-w-6xl mx-auto">
       
-      <h1 class="text-3xl font-bold text-gray-900 relative inline-block pb-1 tracking-tight">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 relative inline-block pb-1 tracking-tight">
         Asamblea de Rectores
         <span class="absolute bottom-0 left-0 w-full h-[3px] flex">
           <span class="w-[55%] bg-[#d91d36]"></span>
@@ -10,7 +10,7 @@
         </span>
       </h1>
 
-      <p class="mt-6 text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
+      <p class="mt-6 text-base md:text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
         Las asambleas de rectores son el máximo órgano de gobierno de la red, donde se toman las decisiones estratégicas.
       </p>
 
@@ -33,15 +33,15 @@
         </div>
       </div>
 
-      <div class="mt-12 bg-white rounded-2xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] p-6 sm:p-10 text-left max-w-5xl mx-auto">
+      <div class="mt-12 bg-white rounded-2xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] p-5 sm:p-8 md:p-10 text-left max-w-5xl mx-auto">
         
         <div class="border-l-[3px] border-black pl-3 mb-4">
-          <h2 class="text-2xl font-bold text-gray-900 tracking-tight">
+          <h2 class="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">
             Asamblea Ordinaria
           </h2>
         </div>
 
-        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-medium mb-6">
+        <div class="flex flex-wrap gap-4 text-[10px] md:text-xs text-gray-400 font-medium mb-6">
           <div class="flex items-center">
             <svg class="w-4 h-4 mr-1.5 text-[#d91d36]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -57,55 +57,55 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-3 mb-8">
+        <div class="flex flex-wrap gap-2 md:gap-3 mb-8">
           <button 
             @click="activeTab = 'agenda'"
             :class="[activeTab === 'agenda' ? 'border-[#2b4c99] text-[#d91d36] font-semibold bg-white' : 'bg-gray-100 text-gray-400 border-transparent']"
-            class="px-5 py-1.5 text-xs rounded-md border transition-all shadow-sm"
+            class="px-4 md:px-5 py-1.5 text-[10px] md:text-xs rounded-md border transition-all shadow-sm"
           >
             Agenda
           </button>
           <button 
             @click="activeTab = 'acuerdos'"
             :class="[activeTab === 'acuerdos' ? 'border-[#2b4c99] text-[#d91d36] font-semibold bg-white' : 'bg-gray-100 text-gray-400 border-transparent']"
-            class="px-5 py-1.5 text-xs rounded-md border transition-all shadow-sm"
+            class="px-4 md:px-5 py-1.5 text-[10px] md:text-xs rounded-md border transition-all shadow-sm"
           >
             Acuerdos
           </button>
           <button 
             @click="activeTab = 'fotos'"
             :class="[activeTab === 'fotos' ? 'border-[#2b4c99] text-[#d91d36] font-semibold bg-white' : 'bg-gray-100 text-gray-400 border-transparent']"
-            class="px-5 py-1.5 text-xs rounded-md border transition-all shadow-sm"
+            class="px-4 md:px-5 py-1.5 text-[10px] md:text-xs rounded-md border transition-all shadow-sm"
           >
             Fotos
           </button>
           <button 
             @click="activeTab = 'documentos'"
             :class="[activeTab === 'documentos' ? 'border-[#2b4c99] text-[#d91d36] font-semibold bg-white' : 'bg-gray-100 text-gray-400 border-transparent']"
-            class="px-5 py-1.5 text-xs rounded-md border transition-all shadow-sm"
+            class="px-4 md:px-5 py-1.5 text-[10px] md:text-xs rounded-md border transition-all shadow-sm"
           >
             Documentos
           </button>
         </div>
 
         <div v-if="activeTab === 'agenda'">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div 
               v-for="(punto, index) in agendaItems" 
               :key="index"
-              class="flex items-center bg-[#f4f7fd] rounded-lg p-4 border border-gray-100/50"
+              class="flex items-center bg-[#f4f7fd] rounded-lg p-3 md:p-4 border border-gray-100/50"
             >
-              <div class="flex-shrink-0 w-8 h-8 rounded border border-purple-900 bg-white flex items-center justify-center text-xs font-bold text-purple-900 mr-4">
+              <div class="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded border border-purple-900 bg-white flex items-center justify-center text-[10px] md:text-xs font-bold text-purple-900 mr-3 md:mr-4">
                 {{ index + 1 }}
               </div>
-              <p class="text-xs font-semibold text-[#3b5ba5] leading-snug">
+              <p class="text-[10px] md:text-xs font-semibold text-[#3b5ba5] leading-snug">
                 {{ punto }}
               </p>
             </div>
           </div>
         </div>
 
-        <div v-else class="text-sm text-gray-500 py-8 text-center bg-gray-50 rounded-lg border border-dashed">
+        <div v-else class="text-xs md:text-sm text-gray-500 py-8 text-center bg-gray-50 rounded-lg border border-dashed">
           Contenido de {{ activeTab.toUpperCase() }} disponible próximamente.
         </div>
 

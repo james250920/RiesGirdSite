@@ -85,10 +85,21 @@ const metricas = [
 }
 
 /* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .stats-section {
+    padding: 0 40px;
+    transform: translateY(-25%);
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .stats-section {
-    /* Suavizamos la superposición en tablets para evitar colisiones críticas */
-    transform: translateY(-30px); 
+    padding: 0 20px;
+    transform: translateY(-20px); 
   }
   
   .stats-grid {
@@ -97,19 +108,28 @@ const metricas = [
   }
   
   .stat-number {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 480px) {
   .stats-section {
-    max-width: 290px; 
-    transform: translateY(-20px); /* Ajuste mínimo para teléfonos */
+    max-width: 100%; 
+    transform: translateY(-10px);
   }
   
   .stats-grid {
     grid-template-columns: 1fr; 
-    gap: 15px;
+    gap: 12px;
+  }
+
+  .stat-card {
+    aspect-ratio: auto;
+    padding: 20px;
   }
 }
 </style>

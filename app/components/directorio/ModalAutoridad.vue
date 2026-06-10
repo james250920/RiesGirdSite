@@ -399,6 +399,12 @@ function onImgError(e) {
 }
 
 /* Adaptabilidad Móvil */
+@media (max-width: 1024px) {
+  .modal-container {
+    max-width: 900px;
+  }
+}
+
 @media (max-width: 820px) {
   .modal-layout {
     grid-template-columns: 1fr;
@@ -406,9 +412,25 @@ function onImgError(e) {
   .lateral-autoridad {
     border-right: none;
     border-bottom: 2px solid #1a3a6e;
+    padding: 24px 16px;
+  }
+  .comite-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    max-height: 95vh;
+  }
+  .panel-soporte {
+    padding: 24px 16px;
   }
   .comite-grid-layout {
     grid-template-columns: 1fr;
+  }
+  .tarjeta-miembro-row {
+    max-width: 100%;
   }
 }
 </style>

@@ -32,4 +32,20 @@ import LineasInvestigacion from '~/components/servicioDesarrolloTerritorial/line
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
+
+@media (max-width: 1024px) {
+  .main-body {
+    padding: 20px 10px;
+  }
+  .content-wrapper {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+}
 </style>

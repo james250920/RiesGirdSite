@@ -124,9 +124,32 @@ const cards = ref([
 /* Grid Responsivo (CSS Grid Puro) */
 .tarjetas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .tarjetas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .titulo-principal {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarjetas-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .registro-container {
+    padding: 32px 16px;
+  }
+  .titulo-principal {
+    font-size: 1.5rem;
+  }
 }
 
 /* Tarjeta */

@@ -235,136 +235,43 @@ function onImgError(e) {
 
 .directorio__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.tarjeta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--blanco);
-  border: 1px solid var(--borde);
-  border-radius: var(--radio);
-  padding: 20px;
-  box-shadow: var(--sombra);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tarjeta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1);
-  border-color: #94a3b8;
-}
-
-.tarjeta__foto-wrap {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.tarjeta__foto {
-  width: 80px;
-  height: 95px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  background: #e2e8f0;
-  border: 1px solid #cbd5e1;
-}
-
-.tarjeta__logo-wrap {
-  position: absolute;
-  bottom: -6px;
-  left: -6px;
-  width: 30px;
-  height: 30px;
-  background: var(--blanco);
-  border-radius: 50%;
-  border: 1.5px solid var(--borde);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.tarjeta__logo {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.tarjeta__info {
-  flex: 1;
-  min-width: 0;
-}
-
-.tarjeta__cargo {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--azul-claro);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.tarjeta__nombre {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--texto);
-  margin: 0 0 10px;
-  line-height: 1.35;
-}
-
-.tarjeta__contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.tarjeta__contacto-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.tarjeta__icon {
-  width: 14px;
-  height: 14px;
-  color: var(--gris);
-  flex-shrink: 0;
-}
-
-.tarjeta__link {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #0284c7;
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.tarjeta__link:hover {
-  text-decoration: underline;
-  color: var(--azul);
-}
-
-.tarjeta__telefono {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--gris);
+@media (max-width: 1024px) {
+  .directorio {
+    padding: 32px 20px;
+  }
+  .directorio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .directorio__filtros {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .directorio__filtros { grid-template-columns: repeat(2, 1fr); }
+  .directorio__filtros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .directorio__grid {
+    grid-template-columns: 1fr;
+  }
+  .directorio__titulo {
+    font-size: 1.5rem;
+  }
 }
+
 @media (max-width: 640px) {
-  .directorio__grid { grid-template-columns: 1fr; }
+  .directorio__filtros {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 440px) {
-  .directorio__filtros { grid-template-columns: 1fr; }
+  .directorio__filtros {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

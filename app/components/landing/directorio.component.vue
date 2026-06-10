@@ -276,14 +276,31 @@ const directivos = [
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+  .directorio-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
   .directorio-grid {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
+  .directorio-section {
+    padding: 40px 15px;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
   .directorio-card {
     flex-direction: column;
     text-align: center;
@@ -295,11 +312,15 @@ const directivos = [
     width: 80px;
     height: 2px;
     flex-direction: row;
-    margin: 10px 0;
+    margin: 15px 0;
   }
   
   .cargo-tag {
     margin: 0 auto 6px auto;
+  }
+
+  .contact-details {
+    align-items: center;
   }
 }
 </style>

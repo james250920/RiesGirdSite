@@ -243,7 +243,30 @@
 }
 
 /* 4. RESPONSILE DESIGN */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .grid-objetivos {
+    gap: 35px 20px;
+  }
+
+  .card-objetivo {
+    min-width: 280px;
+  }
+}
+
 @media (max-width: 768px) {
+  .objetivos-section {
+    padding: 40px 15px;
+  }
+
   .grid-objetivos {
     flex-direction: column;
     align-items: center;
@@ -259,8 +282,13 @@
     padding: 40px 20px;
   }
 
-  .section-title {
-    font-size: 1.8rem;
+  .quote-text {
+    font-size: 1.05rem;
+  }
+
+  .tag-flotante-general {
+    padding: 6px 20px;
+    font-size: 1rem;
   }
 }
 </style>

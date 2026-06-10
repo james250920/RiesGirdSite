@@ -54,17 +54,15 @@ import Estatutos from '~/components/estructuraOrganizacional/estatuto.component.
 
 /* Ajustes para pantallas pequeñas y móviles */
 @media (max-width: 1024px) {
-  .two-column-layout {
-    flex-direction: column;
-  }
-
-  .right-column {
-    width: 100%;
-    position: static;
-  }
-  
   .content-wrapper {
-    padding: 20px; /* Menos padding en móvil para aprovechar espacio */
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 20px 15px;
+    border-radius: 12px;
   }
 }
 </style>

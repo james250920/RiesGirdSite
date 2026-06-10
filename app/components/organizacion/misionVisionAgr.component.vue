@@ -208,7 +208,25 @@
 }
 
 /* 8. RESPONSIVE DESIGN PARA DISPOSITIVOS MÓVILES */
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
+  .cards-row {
+    gap: 20px;
+  }
+
+  .info-card {
+    padding: 40px 30px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mision-vision-section {
+    padding: 40px 15px;
+  }
+
   .cards-row {
     flex-direction: column;
     gap: 25px;

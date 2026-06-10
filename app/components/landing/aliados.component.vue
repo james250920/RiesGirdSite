@@ -139,7 +139,17 @@ const logos = [
 }
 
 /* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+}
+
 @media (max-width: 768px) {
+  .aliados-section {
+    padding: 30px 10px;
+  }
   .slide {
     width: 180px;
     padding: 0 20px;

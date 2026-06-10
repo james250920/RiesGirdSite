@@ -106,7 +106,13 @@ import PublishActivityBox from '~/components/eventosNoticias/publishActivityBox.
   }
   
   .content-wrapper {
-    padding: 20px; /* Menos padding en móvil para aprovechar espacio */
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 20px 15px;
   }
 }
 </style>

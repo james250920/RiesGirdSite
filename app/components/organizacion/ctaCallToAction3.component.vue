@@ -89,7 +89,7 @@ const handleNavigation = () => {
 /* --- RESPONSIVE DESIGN --- */
 
 /* Tablets */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .cta-text {
     font-size: 1.5rem;
   }
@@ -101,9 +101,9 @@ const handleNavigation = () => {
 }
 
 /* Móviles (Se apila verticalmente y se centra todo) */
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .cta-banner-section {
-    padding: 45px 20px;
+    padding: 40px 20px;
   }
 
   .cta-content {
@@ -113,7 +113,7 @@ const handleNavigation = () => {
   }
 
   .cta-text {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     max-width: 100%;
   }
 

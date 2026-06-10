@@ -103,4 +103,29 @@ const handleMouseLeave = () => {
 .image-container:hover img {
   transform: scale(1.02);
 }
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 30px 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+}
 </style>

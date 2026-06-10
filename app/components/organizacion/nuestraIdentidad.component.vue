@@ -137,11 +137,15 @@ const fotoNaturaleza = '/img.png';
   }
   
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
   }
 
   .naturaleza-card {
     padding: 30px;
+  }
+
+  .paragraph {
+    font-size: 1.1rem;
   }
 }
 
@@ -149,6 +153,10 @@ const fotoNaturaleza = '/img.png';
 @media (max-width: 768px) {
   .naturaleza-section {
     padding: 40px 15px;
+  }
+
+  .title-container {
+    margin-bottom: 30px;
   }
 
   .content-grid {
@@ -161,7 +169,8 @@ const fotoNaturaleza = '/img.png';
   }
 
   .paragraph {
-    font-size: 1.05rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-[#fcfcfc] py-16 px-4 sm:px-6 lg:px-8 font-sans text-center">
+  <div class="min-h-screen bg-[#fcfcfc] py-8 md:py-16 px-4 sm:px-6 lg:px-8 font-sans text-center">
     <div class="max-w-6xl mx-auto">
       
-      <h1 class="text-3xl font-bold text-gray-900 relative inline-block pb-1 tracking-tight mb-12">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 relative inline-block pb-1 tracking-tight mb-8 md:mb-12">
         Directorio
         <span class="absolute bottom-0 left-0 w-full h-[3px] flex">
           <span class="w-[55%] bg-[#d91d36]"></span>
@@ -10,9 +10,9 @@
         </span>
       </h1>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-4">
+      <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto mb-4">
         <div class="relative bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-200/70 px-4 py-2 flex items-center">
-          <select v-model="filtroUniversidad" class="w-full text-xs font-semibold text-gray-500 bg-transparent focus:outline-none appearance-none pr-6 cursor-pointer">
+          <select v-model="filtroUniversidad" class="w-full text-[10px] md:text-xs font-semibold text-gray-500 bg-transparent focus:outline-none appearance-none pr-6 cursor-pointer">
             <option value="">Universidad</option>
             <option value="UPT">UPT</option>
             <option value="UNTELS">UNTELS</option>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="relative bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-gray-200/70 px-4 py-2 flex items-center">
-          <select v-model="filtroCargo" class="w-full text-xs font-semibold text-gray-500 bg-transparent focus:outline-none appearance-none pr-6 cursor-pointer">
+          <select v-model="filtroCargo" class="w-full text-[10px] md:text-xs font-semibold text-gray-500 bg-transparent focus:outline-none appearance-none pr-6 cursor-pointer">
             <option value="">Rector</option>
             <option value="Rector">Rector</option>
             <option value="Rectora">Rectora</option>
@@ -40,14 +40,14 @@
         </div>
 
         <div v-for="label in ['Vicerrector Académico', 'Vicerrector de Investigación']" :key="label" class="relative bg-gray-100/80 rounded-xl border border-gray-200/50 px-4 py-2 flex items-center justify-between text-gray-400 cursor-not-allowed">
-          <span class="text-xs font-semibold truncate">{{ label }}</span>
+          <span class="text-[10px] md:text-xs font-semibold truncate">{{ label }}</span>
           <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-16">
+      <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto mb-10 md:mb-16">
         <div v-for="label in ['Director General de Administración', 'Secretaría Técnica', 'Consejo Directivo', 'Comité Técnico Interáreas']" :key="label" class="relative bg-gray-100/80 rounded-xl border border-gray-200/50 px-4 py-2 flex items-center justify-between text-gray-400 cursor-not-allowed">
-          <span class="text-xs font-semibold truncate text-left">{{ label }}</span>
+          <span class="text-[10px] md:text-xs font-semibold truncate text-left">{{ label }}</span>
           <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
         </div>
       </div>
@@ -56,9 +56,9 @@
         <div 
           v-for="(persona, index) in autoridadesVisibles" 
           :key="index"
-          class="bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.03)] border border-gray-100 p-4 flex items-center text-left w-full"
+          class="bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.03)] border border-gray-100 p-4 flex flex-col sm:flex-row items-center sm:items-stretch text-center sm:text-left w-full"
         >
-          <div class="relative flex-shrink-0 w-28 h-28 rounded-xl overflow-visible bg-gray-50">
+          <div class="relative flex-shrink-0 w-28 h-28 rounded-xl overflow-visible bg-gray-50 mb-4 sm:mb-0">
             <img :src="persona.foto" :alt="persona.nombre" class="w-full h-full object-cover rounded-xl" />
             
             <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-white border border-gray-100 rounded-md shadow-sm p-1 flex items-center justify-center overflow-hidden">
@@ -66,22 +66,22 @@
             </div>
           </div>
 
-          <div class="ml-6 flex-1 py-1 flex flex-col justify-center h-28 border-l border-gray-100 pl-4">
+          <div class="sm:ml-6 flex-1 py-1 flex flex-col justify-center sm:min-h-[112px] sm:border-l sm:border-gray-100 sm:pl-4">
             <span class="text-[10px] text-gray-500 underline decoration-gray-300 font-semibold block mb-0.5">
               {{ persona.cargo }} {{ persona.universidad }}
             </span>
-            <h3 class="text-base font-bold text-gray-900 leading-tight">
+            <h3 class="text-sm md:text-base font-bold text-gray-900 leading-tight">
               {{ persona.nombre }}
             </h3>
             
-            <div class="mt-2 space-y-0.5">
-              <div class="flex items-center text-[11px] text-gray-400 font-medium">
+            <div class="mt-2 space-y-0.5 flex flex-col items-center sm:items-start">
+              <div class="flex items-center text-[10px] md:text-[11px] text-gray-400 font-medium max-w-full">
                 <svg class="w-3.5 h-3.5 mr-1.5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span class="truncate hover:underline cursor-pointer">{{ persona.correo || '---' }}</span>
               </div>
-              <div class="flex items-center text-[11px] text-gray-400 font-medium">
+              <div class="flex items-center text-[10px] md:text-[11px] text-gray-400 font-medium">
                 <svg class="w-3.5 h-3.5 mr-1.5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>

@@ -196,25 +196,48 @@ const documentos = [
 }
 
 /* ================= 5. ADAPTACIÓN RESPONSIVA ================= */
-@media (max-width: 990px) {
+@media (max-width: 1024px) {
   .documentos-grid {
-    grid-template-columns: repeat(2, 1fr); /* Pasa a dos columnas en tablets */
-    max-width: 720px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    gap: 20px;
   }
-  
+  .main-title {
+    font-size: 2rem;
+  }
   .doc-title, .doc-institution {
-    min-height: auto; /* Desactiva alturas fijas en responsive */
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .documentos-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+  .main-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  .section-intro {
+    font-size: 0.95rem;
+  }
+  .documento-card {
+    padding: 30px 20px;
+  }
+  .avatar-circle {
+    width: 90px;
+    height: 90px;
+  }
+  .avatar-icon {
+    width: 50px;
+    height: 50px;
   }
 }
 
 @media (max-width: 650px) {
   .documentos-grid {
-    grid-template-columns: 1fr; /* Una sola columna en celulares */
     max-width: 360px;
-  }
-
-  .main-title {
-    font-size: 1.8rem;
   }
 }
 </style>

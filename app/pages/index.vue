@@ -52,9 +52,20 @@ import ModuloComponent from '~/components/landing/modulo.component.vue';
 }
 
 /* --- Adaptación para Móviles (Responsive) --- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .content-wrapper {
-    padding: 20px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-body {
+    padding: 20px 10px;
+  }
+
+  .content-wrapper {
+    padding: 20px 15px;
+    border-radius: 12px;
   }
 }
 </style>

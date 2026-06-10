@@ -98,6 +98,12 @@ const bgImage = '/img.png'
 }
 
 /* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .banner-title {
+    font-size: 2.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-banner-section {
     height: 380px;

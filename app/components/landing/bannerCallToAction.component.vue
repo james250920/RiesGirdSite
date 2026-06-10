@@ -94,24 +94,35 @@ const redirigirRegistro = () => {
 }
 
 /* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .cta-text {
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .cta-container {
+    margin: 20px auto;
+  }
+
   .cta-banner-button {
     padding: 15px 20px;
     border-radius: 10px;
+    gap: 10px;
   }
   
   .cta-text {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .icon-user-add {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .icon-arrow {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 }
 </style>

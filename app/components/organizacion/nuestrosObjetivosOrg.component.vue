@@ -411,32 +411,40 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 900px) {
-
-  .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
+@media (max-width: 1024px) {
   .section-title {
     font-size: 1.9rem;
   }
 
   .main-card,
   .specific-card {
-    padding: 35px 20px;
+    padding: 40px 25px;
+  }
+
+  .cards-grid {
+    gap: 40px 30px;
   }
 
   .objective-header {
-    width: 88%;
+    width: 90%;
+    font-size: 1rem;
   }
 
   .objective-body {
-    min-height: 180px;
+    min-height: 170px;
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .objetivos-section {
+    padding: 40px 15px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
 
   .section-title {
     font-size: 1.6rem;
@@ -444,6 +452,7 @@
 
   .section-description {
     font-size: 1rem;
+    margin-bottom: 30px;
   }
 
   .general-box {
@@ -454,13 +463,13 @@
   .objective-header {
     width: 100%;
     font-size: 1rem;
+    min-height: 60px;
   }
 
   .objective-body {
     padding: 34px 22px 26px;
-    font-size: 0.96rem;
-    min-height: 170px;
+    font-size: 0.95rem;
+    min-height: 160px;
   }
 }
-
 </style>

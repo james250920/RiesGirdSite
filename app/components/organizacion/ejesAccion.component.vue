@@ -152,28 +152,37 @@ const ejes = [
 }
 
 /* --- RESPONSIVE DESIGN --- */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
+
   .ejes-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .ejes-section {
+    padding: 50px 15px;
+  }
+
   .ejes-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .eje-card {
     padding: 35px 20px;
   }
   
-  .section-title {
-    font-size: 1.8rem;
-  }
-  
   .eje-icon {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+
+  .eje-title {
+    font-size: 1.2rem;
   }
 }
 </style>

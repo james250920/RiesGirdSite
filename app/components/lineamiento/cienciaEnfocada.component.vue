@@ -107,8 +107,13 @@ const infoImage = '/img.png'
 
 /* Tablets */
 @media (max-width: 1024px) {
+  .red-info-section {
+    padding: 50px 0;
+  }
+  
   .info-title {
     font-size: 1.8rem;
+    margin-bottom: 40px;
   }
   
   .description-text {
@@ -122,19 +127,24 @@ const infoImage = '/img.png'
 
 /* Móviles (Se apilan en una sola columna) */
 @media (max-width: 768px) {
+  .red-info-section {
+    padding: 40px 0;
+  }
+
   .info-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 25px;
   }
 
   .info-title {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .description-text {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .red-underline {

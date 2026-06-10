@@ -133,57 +133,36 @@
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 640px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .colaboramos-section {
+    padding: 2.5rem 1.25rem;
+  }
+  .title {
+    font-size: 1.6rem;
   }
 }
 
-/* ── Card base ───────────────────────────────────────── */
-.card {
-  position: relative;
-  background: var(--white);
-  border-radius: 0.875rem;
-  padding: 2rem 1.75rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  min-height: 340px;
-}
-
-/* Borde degradado sutil via pseudo-element */
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1.5px;
-  background: linear-gradient(135deg, var(--red), var(--blue));
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 0.55;
-}
-
-/* ── Card wide (full-width) ──────────────────────────── */
-.card--wide {
-  min-height: unset;
-  padding: 2rem 2.5rem;
-}
-
-.card-wide-inner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  text-align: left;
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+  .subtitle {
+    font-size: 0.825rem;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  .icon {
+    font-size: 2.8rem;
+  }
+  .icon--lg {
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 640px) {

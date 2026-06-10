@@ -170,7 +170,26 @@
 }
 
 /* --- RESPONSIVE / DISEÑO ADAPTATIVO MÓVIL --- */
+@media (max-width: 1024px) {
+  .card {
+    padding: 40px 30px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .mision-vision-container {
+    padding: 20px 10px;
+    gap: 30px;
+  }
+
   .card {
     padding: 30px 20px;
   }
@@ -182,6 +201,10 @@
   
   .image-side img {
     max-width: 100%; /* La imagen ocupa todo el ancho disponible en móvil */
+  }
+
+  .card-text {
+    text-align: left; /* Better readability on mobile */
   }
 }
 </style>

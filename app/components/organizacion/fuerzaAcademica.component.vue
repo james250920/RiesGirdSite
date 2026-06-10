@@ -123,14 +123,14 @@ const fotoComunidad = '/img.png';
   transform: scale(1.02);
 }
 
-/* --- DISEÑO RESPONSIVO COMPLETO --- */
+/* --- DISEÑO RESPONSIVE COMPLETO --- */
 
 /* Ajuste para Tablets */
 @media (max-width: 1024px) {
   .section-title {
     font-size: 1.85rem;
   }
-  
+
   .fuerza-grid {
     gap: 40px;
   }
@@ -153,13 +153,13 @@ const fotoComunidad = '/img.png';
   }
 
   .section-title {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 
   .description-paragraph {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
-  
+
   .photo-wrapper {
     max-width: 550px;
     margin: 0 auto; /* Centra la imagen en móviles */

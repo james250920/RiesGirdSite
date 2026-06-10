@@ -168,15 +168,50 @@ const principios = [
 }
 
 /* 5. RESPONSIVE DESIGN PARA DISPOSITIVOS MÓVILES */
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
+  .main-title {
+    font-size: 1.85rem;
+  }
+
   .principios-grid {
-    grid-template-columns: 1fr; /* Colapsa verticalmente de manera ordenada */
-    max-width: 460px; /* Mantiene proporciones estéticas en pantallas verticales */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
     gap: 25px;
   }
 
+  .principio-card {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .principios-section {
+    padding: 40px 15px;
+  }
+
+  .principios-grid {
+    grid-template-columns: 1fr; /* Colapsa verticalmente de manera ordenada */
+    max-width: 460px; /* Mantiene proporciones estéticas en pantallas verticales */
+    gap: 20px;
+  }
+
   .main-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    min-height: auto;
+    margin-bottom: 12px;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
   }
 }
 </style>

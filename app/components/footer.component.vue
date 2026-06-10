@@ -222,7 +222,7 @@ const currentYear = 2026
 
   .footer-links-grid {
     width: 100%;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium tablets */
     gap: 30px;
   }
 
@@ -231,14 +231,29 @@ const currentYear = 2026
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .footer-links-grid {
-    grid-template-columns: 1fr; /* 1 sola columna en dispositivos móviles */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small tablets/phones */
     gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr; /* 1 column on phones */
+    gap: 20px;
   }
   
   .column-title {
     margin-bottom: 12px;
+  }
+
+  .links-list li {
+    padding-left: 0;
+  }
+
+  .links-list li::before {
+    display: none; /* Hide bullets on centered mobile view to look cleaner */
   }
 }
 </style>
